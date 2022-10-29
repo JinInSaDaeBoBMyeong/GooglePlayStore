@@ -50,7 +50,6 @@ def crawler(country,download):
             for j in tmp:
                 if j not in links:
                     links.append(j)
-            break
         except:
             print("[*]ERROR IS IN "+link)
             break
