@@ -21,7 +21,7 @@ def crawler_v2(country,download):
     #https://play.google.com/store/search?q=com.facebook.lite&hl=en&c=apps
     for index,value in enumerate(links):
         try:
-            print("[*]"+value+" is doing")
+            print(f"+[{index+1}]"+value+" is doing")
             driver.get(url=f"https://play.google.com/store/search?q={value}&hl={country}&c=apps")
             
             scroll = 0

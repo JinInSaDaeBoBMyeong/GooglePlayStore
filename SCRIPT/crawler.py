@@ -26,7 +26,7 @@ def crawler(country,download):
     cnt_init = len(links)
 
     for link in links:
-        print("[*]"+link.split('?id=')[1].split('&')[0]+" is doing")
+        print(f"[{cnt}]"+link.split('?id=')[1].split('&')[0]+" is doing")
         try:
             cnt+=1
             if cnt_init==cnt:
