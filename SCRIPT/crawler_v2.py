@@ -53,7 +53,8 @@ def crawler_v2(country,download):
                 j = j.split("?id=")[1]
                 if j not in links:
                     links.append(j)
-        except:
+        except Exception as e:
+            print('Error',e)
             break
         
     num_seq = len(seq)
