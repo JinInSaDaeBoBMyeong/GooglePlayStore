@@ -50,8 +50,10 @@ def crawler(country,download):
             for j in tmp:
                 if j not in links:
                     links.append(j)
+        except KeyboardInterrupt:
+            print("KeyboardInterrupt exception is caught")
+            break
         except Exception as e:
-            print('Error',e)
             print("[*]ERROR IS IN "+link)
             break
 

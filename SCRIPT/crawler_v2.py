@@ -53,6 +53,9 @@ def crawler_v2(country,download):
                 j = j.split("?id=")[1]
                 if j not in links:
                     links.append(j)
+        except KeyboardInterrupt:
+            print("KeyboardInterrupt exception is caught")
+            break
         except Exception as e:
             print('Error',e)
             break
