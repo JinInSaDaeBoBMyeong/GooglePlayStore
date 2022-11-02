@@ -18,7 +18,6 @@ if   __name__=="__main__":
     ##crawler_v2
     tmp_list= crawler_v2(country, download)
     
-    os.system('cls')
     print("[*]Crawling is Done\n\n")
     
     ##download
