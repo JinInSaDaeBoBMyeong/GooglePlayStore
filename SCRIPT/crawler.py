@@ -38,8 +38,8 @@ def crawler(country,download):
                 seq.append(target[0].text.split("\n")[0])
             except:
                 seq.append("None")
-
-        
+            print(f"\t[+]count of download : {seq[cnt-1]}")
+                    
             #수집
             tmp = driver.find_elements(By.XPATH,'//a[contains(@href,"/store/apps/details?id=")]')
             for i,_ in enumerate(tmp):
