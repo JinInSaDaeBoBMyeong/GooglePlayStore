@@ -20,17 +20,15 @@ def crawler(country,download):
         links[i] = links[i].get_attribute('href')+"&hl="+country              #나라 설정
     links = list(set(links))
 
+    #다운로드 명이 담길 변수명
     seq =[]
 
     cnt = 0
-    cnt_init = len(links)
 
     for link in links:
         print(f"[{cnt}]"+link.split('?id=')[1].split('&')[0]+" is doing")
         try:
             cnt+=1
-            if cnt_init==cnt:
-                print("[*]You can input Ctrl+C anytime you want!!:)")
             driver.get(url=link)
             
             #Download 수 파악
@@ -50,6 +48,7 @@ def crawler(country,download):
             for j in tmp:
                 if j not in links:
                     links.append(j)
+                    
         except KeyboardInterrupt:
             print("KeyboardInterrupt exception is caught")
             break
